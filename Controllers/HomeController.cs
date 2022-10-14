@@ -43,7 +43,7 @@ namespace pruebaConexionPostgreSQLV.Controllers
             System.Console.WriteLine("[INFORMACIÓN-HomeController-Index] Estado conexión generada: " + estadoGenerada);
 
             //Se realiza insert en la tabla alumnos
-            ConsultasPostgreSQL.insertNuevoAlumno("INSERT INTO \"proyectoEclipse\".\"alumnos\" (id_alumno,nombre,apellidos,email) VALUES(21,'Paco','Fernández','pf@altair.es')", conexionGenerada);
+            ConsultasPostgreSQL.insertNuevoAlumno("INSERT INTO \"proyectoEclipse\".\"alumnos\" (id_alumno,nombre,apellidos,email) VALUES(22,'Paco','Fernández','pf@altair.es')", conexionGenerada);
 
             //Se realiza la consulta y se guarda una lista de alumnosDTO
             listAlumnoDTO = ConsultasPostgreSQL.ConsultaSelectPostgreSQL(conexionGenerada);

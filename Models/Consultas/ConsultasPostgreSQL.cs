@@ -16,6 +16,8 @@ namespace pruebaConexionPostgreSQLV.Models.Consultas
         */
         public static List<AlumnoDTO> ConsultaSelectPostgreSQL(NpgsqlConnection conexionGenerada)
         {
+
+            System.Console.WriteLine("[INFORMACIÓN-ConsultasPostgreSQL-insertNuevoAlumno] Entra en ConsultaSelectPostgreSQL");
             List<AlumnoDTO> listAlumnos = new List<AlumnoDTO>();
             try
             {
@@ -38,8 +40,7 @@ namespace pruebaConexionPostgreSQLV.Models.Consultas
             {
 
                 System.Console.WriteLine("[ERROR-ConsultasPostgreSQL-ConsultaSelectPostgreSQL] Error al ejecutar consulta: " + e);
-                conexionGenerada.Close();
-
+                
             }
             return listAlumnos;
         }
@@ -48,7 +49,7 @@ namespace pruebaConexionPostgreSQLV.Models.Consultas
         */
         public static void insertNuevoAlumno(String consultaGenerada, NpgsqlConnection conexionGenerada)
         {
-            System.Console.WriteLine("[ERROR-ConsultasPostgreSQL-insertNuevoAlumno] Entra en insertNuevoAlumno");
+            System.Console.WriteLine("[INFORMACIÓN-ConsultasPostgreSQL-insertNuevoAlumno] Entra en insertNuevoAlumno");
 
             try
             {
